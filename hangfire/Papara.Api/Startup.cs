@@ -65,7 +65,7 @@ namespace Papara.Customer.Api
            
             services.Configure<CacheConfiguration>(Configuration.GetSection("CacheConfiguration"));
             services.AddAutoMapper(typeof(MapProfile));
-            //For In-Memory Caching
+            
             services.AddMemoryCache();
             services.AddTransient<MemoryCacheService>();
             services.AddTransient<RedisCacheService>();
